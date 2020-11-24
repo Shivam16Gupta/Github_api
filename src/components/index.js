@@ -19,14 +19,14 @@ const Index = ()=>{
         axios.get(`https://api.github.com/users/${input}/repos?sort=created:asc`).then(response=>{
                 
                 const point=response.data;
-                console.log(point);
                 setName(point.map((val)=>{
                     
                     return val;
                 }));
                 
-            })
+            }).catch(error => window.alert("Input field is empty"))
      };
+     
         return(
             <div>
                 <div id='nav'>
@@ -39,6 +39,7 @@ const Index = ()=>{
                 </div>
             </div>
         );
+    
     
 }
 export default Index;

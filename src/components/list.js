@@ -4,11 +4,11 @@ import '../assets/App.css';
 const List =(props)=>{
     const newArr=props.arr;
     
-    if(newArr)
+    if(newArr.length)
     {
     return(
         <div id='container'>
-            <h3>{newArr.map((e)=> <li id='name'>
+            <h3>{newArr.map((e)=> <li id='name' key={e.id}>
                 <a href={e.html_url}>
                     {e.name}
                     </a>
@@ -18,7 +18,7 @@ const List =(props)=>{
     );
     }
     else{
-        return(<div><h1>NO REPOS!!</h1></div>);
+        return(<div id='res'><h1>NO REPOS!!</h1></div>);
         
     }
 }

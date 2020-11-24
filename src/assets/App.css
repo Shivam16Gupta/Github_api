@@ -5,7 +5,10 @@ body{
   list-style: none;
   width:auto;
   height:auto;
-  margin:20px;
+  background-color: #b8de6f;
+  padding:20px;
+  border-radius: 10px;
+  border-style: double;
 }
 #nav{
   background-color: rgb(0, 123, 255);
@@ -19,7 +22,6 @@ body{
 #field{
   width:10%;
   height:35px;
-  
   margin-left: 60%;
   margin-top: 15px;
   border-style: none;
@@ -32,8 +34,11 @@ b{
   margin-left: 5px;
 }
 #container{
-  background-color: #f1f6f9;
   width:60vw;
   margin-left: 20%;
   border-radius: 10px;
+}
+#res{
+  color: white;
+  text-align: center;
 }
