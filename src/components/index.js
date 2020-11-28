@@ -16,7 +16,8 @@ const Index = ()=>{
     
      const handleSubmit=(e)=>{
         e.preventDefault();
-        axios.get(`https://api.github.com/users/${input}/repos?sort=created:asc`).then(response=>{
+        
+            axios.get(`https://api.github.com/users/${input}/repos?sort=created:asc`).then(response=>{
                 
                 const point=response.data;
                 setName(point.map((val)=>{
@@ -24,7 +25,9 @@ const Index = ()=>{
                     return val;
                 }));
                 
-            }).catch(error => window.alert("Input field is empty"))
+            }).catch(error => {
+                window.alert("No Input");
+              });
      };
      
         return(
