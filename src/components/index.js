@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import List from '../components/list';
 import '../assets/App.css';
 import { Button } from '@material-ui/core';
+import swal from 'sweetalert';
 
 const Index = ()=>{
 
@@ -26,7 +27,9 @@ const Index = ()=>{
                 }));
                 
             }).catch(error => {
-                window.alert("No Input");
+                if(error!= null){
+                    swal('Alert!','NO INPUT','error');
+                }
               });
      };
      
