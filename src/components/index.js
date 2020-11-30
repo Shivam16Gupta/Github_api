@@ -4,6 +4,7 @@ import '../assets/App.css';
 import { Button } from '@material-ui/core';
 import swal from 'sweetalert';
 import userData from '../service/api';
+import bg from '../assets/images/undraw_File_searching_re_3evy-1.svg';
 
 const Index = ()=>{
 
@@ -24,9 +25,8 @@ const Index = ()=>{
         },(err)=>{
             swal("Sorry!!","INVALID USER","error");
         });
-            
+        
      };
-     
         return(
             <div>
                 <div id='nav'>
@@ -35,11 +35,9 @@ const Index = ()=>{
                     <Button id='search' variant='contained' onClick={handleSubmit}>Search</Button>
                 </div>
                 <div>
-                    <List arr={name}/>
+                    {name.length===0?<img src={bg} alt='background' />:<List arr={name}/>}
                 </div>
             </div>
         );
-    
-    
 }
 export default Index;

@@ -42,3 +42,8 @@ b{
   color: white;
   text-align: center;
 }
+img{
+  margin-left:30%;
+  margin-right:auto;
+  opacity:0.8;
+}
