@@ -1,9 +1,9 @@
-import axios from 'axios';
 import React,{useState} from 'react';
 import List from '../components/list';
 import '../assets/App.css';
 import { Button } from '@material-ui/core';
 import swal from 'sweetalert';
+import userData from '../service/api';
 
 const Index = ()=>{
 
@@ -17,20 +17,14 @@ const Index = ()=>{
     
      const handleSubmit=(e)=>{
         e.preventDefault();
-        
-            axios.get(`https://api.github.com/users/${input}/repos?sort=created:asc`).then(response=>{
-                
-                const point=response.data;
-                setName(point.map((val)=>{
-                    
-                    return val;
-                }));
-                
-            }).catch(error => {
-                if(error!= null){
-                    swal('Alert!','NO INPUT','error');
-                }
-              });
+        userData(input,(response)=>{
+            setName(response.data.map((repo)=>{
+                return repo;
+            }));
+        },(err)=>{
+            swal("Sorry!!","INVALID USER","error");
+        });
+            
      };
      
         return(
