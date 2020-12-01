@@ -35,14 +35,14 @@ const Index = ()=>{
         return(
             <div>
                 <div id='nav'>
-                        <b>Find user Repos</b>
-                    
+                    <b>Find user Repos</b>
+                    <form id='form'>
                     <input id='field' placeholder='Name' onChange={handleChange}></input>
                     <Button id='search' variant='contained' onClick={handleSubmit}>Search</Button>
-                    
+                    </form>
                 </div>
                 <div>
-                    {name.length===0?<img src={bg} alt='background' />:
+                    {name.length===0?<div><img id='bg' src={bg} alt='background' /></div>:
                     <div>
                     <img id='avatar' src={avatar} alt='avatar'/>
                     <h3 id='userName'>{user}</h3>

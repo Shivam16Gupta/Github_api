@@ -1,5 +1,6 @@
 body{
   background-color:rgb(103, 177, 255) ;
+  font-family: 'Courier New', Courier, monospace;
 }
 #name{
   list-style: none;
@@ -18,15 +19,20 @@ body{
   width: 100%;
   display: block;
 }
+#form{
+  float:right;
+  margin-right: 5px;
+}
 #search{
- 
+  height:35px;
   margin-left: 10px;
-  margin-left: 10px;
+  margin-top: -3px;
 }
 #field{
-  width:10%;
+  
+  width:200px;
   height:35px;
-  margin-left: 60%;
+  margin-left: auto;
   margin-top: 15px;
   border-style: none;
   border-radius: 5px;
@@ -36,23 +42,24 @@ b{
   color: white;
   font-size: 1.5em;
   margin-left: 5px;
+  width: auto;
 }
 #container{
-  width:60vw;
-  margin-left: 20%;
-  border-radius: 10px;
+ overflow-x: hidden;
 }
 #res{
   color: white;
   text-align: center;
 }
-img{
-  margin-left:30%;
-  margin-right:auto;
+#bg{
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
   opacity:0.8;
 }
 #avatar{
-  margin-top:5%;
+  margin-top:12%;
   border-radius: 50%;
   height:100px;
   margin-left: auto;
@@ -64,4 +71,12 @@ img{
   margin-left: auto;
   margin-right: auto;
   display: table;
+}
+@media screen and (max-width: 600px){
+  #form{
+    float:none;
+  }
+  #navbar{
+    height:100px;
+  }
 }

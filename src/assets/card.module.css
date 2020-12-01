@@ -1,0 +1,20 @@
+.root{
+    min-width: 0;
+    text-align: center;
+    align-content: center;
+  }
+.bullet{
+    display: 'inline-block';
+    margin: '0 2px';
+    transform: 'scale(0.8)';
+  }
+.title{
+    font-size: 14;
+  }
+.pos{
+    margin-bottom: 12;
+  }
+.btn{
+    margin-left: auto;
+    margin-right: auto;
+}
