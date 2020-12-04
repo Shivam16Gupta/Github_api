@@ -76,7 +76,16 @@ b{
   #form{
     float:none;
   }
-  #navbar{
+  #nav{
     height:100px;
+    text-align: center;
   }
+  #b{
+    align-self: center;
+  }
+  #bg{
+    display:none;
+  }
+  #avatar{
+    margin-top:30%;}
 }
