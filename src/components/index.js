@@ -38,7 +38,7 @@ const Index = ()=>{
                     <b>Find user Repos</b>
                     <form id='form'>
                     <input id='field' placeholder='Name' onChange={handleChange}></input>
-                    <Button id='search' variant='contained' onClick={handleSubmit}>Search</Button>
+                    <Button id='search' variant='contained' type='reset' onClick={handleSubmit}>Search</Button>
                     </form>
                 </div>
                 <div>

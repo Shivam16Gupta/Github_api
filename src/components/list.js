@@ -31,7 +31,7 @@ const List =(props)=>{
                     </Typography>
                     </CardContent>
                     <CardActions>
-                    <Button href={e.html_url} color="primary" className={classes.btn}>Visit</Button>
+                    <a href={e.html_url} color="primary" className={classes.btn}>Visit</a>
                     </CardActions>
                     </Card>
                     </Grid>
